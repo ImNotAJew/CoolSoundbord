@@ -1,0 +1,124 @@
+@import "https://fonts.googleapis.com/css?family=Roboto:500";
+
+body {
+  background-color: var(--Background);
+}
+
+body,html {
+  margin: 0px;
+  padding: 0px;
+  border: 0px;
+}
+
+#header {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  min-height: 80px;
+  width: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 99;
+  background-color: var(--HeaderBackground);
+}
+
+.audioButtons[pressed=true] {
+  background-color: var(--SecondaryColor) !important;
+  color: var(--SecondaryButtonFont);
+}
+
+* {
+  transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
+  font-family: 'Roboto', sans-serif;
+}
+
+.audioButtons {
+  width: 160px;
+  min-height: 80px;
+  border: 0px;
+  border-radius: 10px;
+  color: var(--ButtonFont);
+  background-color: var(--ButtonBackground);
+  margin: 40px;
+  padding: 0px;
+}
+
+.audioButtons:hover  {
+  background-color: var(--ButtonBackground2);
+}
+
+#volumeSlider {
+  height:40px;
+  padding: 0px;
+  margin-left: 20px;
+  margin-right: 20px;
+  border: 0px;
+}
+
+#searchField {
+  height: 40px;
+  width: 200px;
+  margin: 20px;
+  border: 0px;
+  padding-left: 20px;
+  padding-right: 20px;
+  background-color: var(--HeaderButtonColor);
+  color: var(--ButtonFont);
+  border-radius: 10px;
+}
+
+#searchField:hover, #icon_theme:hover {
+  background-color: var(--HeaderButtonColorHover);
+}
+
+#icon_theme {
+  height: 40px;
+  width: 40px;
+  margin:20px;
+  background-color: var(--HeaderButtonColor);
+  border-radius: 10px;
+  background-image: var(--ImageUrl);
+}
+
+#buttonWrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+#volumeSlider {
+  background: var(--HeaderButtonColor);
+  border-radius: 10px;
+  margin: 20px;
+}
+
+#volumeSlider:hover {
+  background: var(--HeaderButtonColorHover);
+}
+
+#volumeSlider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 10px;
+  height: 40px;
+  background: var(--ButtonFont);
+  cursor: grab;
+  border: 0px;
+  border-radius: 10px;
+}
+
+#volumeSlider::-moz-range-thumb {
+  width: 10px; /* Set a specific slider handle width */
+  height: 40px; /* Slider handle height */
+  background: var(--ButtonFont);
+  cursor: grab; /* Cursor on hover */
+  border: 0px;
+  border-radius: 10px;
+}
+
+#volumeSlider::-moz-range-track {
+  height:0px;
+}

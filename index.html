@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>David Soundboard | Login</title>
+        <script src="index.js"></script>
+        <link rel="stylesheet" href="main.css">
+    </head>
+    <body class="dark" onload="onload();">
+        <div id="header">
+            <a href="http://"><div id="icon_theme" onclick="changeTheme();"></div></a>
+            <input type="text" id="searchField" onkeyup="searchButtons();"></input>
+            <div><input type="range" min="0" max="100" value="25" class="slider" id="volumeSlider" onchange="setVolume();"></input></div>
+        </div>
+
+        <div id="buttonWrapper">
+            <!-- Buttons will be in here -->
+        </div>
+
+        <audio onloadedmetadata="audioTimeout();" id="audio" preload="metadata">
+            <!-- Sources will be in here -->
+        </audio>
+    </body>
+</html>
